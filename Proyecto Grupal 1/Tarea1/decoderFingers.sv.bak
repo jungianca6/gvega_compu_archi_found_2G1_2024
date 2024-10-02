@@ -1,0 +1,11 @@
+module decoderFingers (
+	input logic a,b,c,d,
+	output logic y1, y0,
+	output [2:0] resultado
+);
+
+	assign y1 = (a & ~c);
+	assign y0 = (~c | (a & ~b));
+	
+endmodule
+
