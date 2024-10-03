@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Wed Oct  2 21:33:54 2024
+Analysis & Elaboration Status : Successful - Wed Oct  2 21:40:26 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : calculadoraFPGA
-Top-level Entity Name : decoderFingers
+Top-level Entity Name : calculadoraFPGA
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

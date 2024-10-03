@@ -1,11 +1,47 @@
-|decoderFingers
+|calculadoraFPGA
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+clk => clk.IN1
+reset => reset.IN1
+resultado[0] << <GND>
+resultado[1] << <GND>
+resultado[2] << <GND>
+display[0] << <GND>
+display[1] << <GND>
+display[2] << <GND>
+display[3] << <GND>
+y1 << y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 << y0.DB_MAX_OUTPUT_PORT_TYPE
+yb1 << decoderAcumulator:acumulator.yb1
+yb0 << decoderAcumulator:acumulator.yb0
+
+
+|calculadoraFPGA|decoderFingers:decoder1
 a => comb.IN0
 a => NOTab.IN0
 b => NOTab.IN1
 c => comb.IN1
 c => comb.IN1
 d => ~NO_FANOUT~
-y1 << comb.DB_MAX_OUTPUT_PORT_TYPE
-y0 << comb.DB_MAX_OUTPUT_PORT_TYPE
+y1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|calculadoraFPGA|decoderAcumulator:acumulator
+clk => y2~reg0.CLK
+clk => y3~reg0.CLK
+reset => y2~reg0.ACLR
+reset => y3~reg0.ACLR
+y1 => aXORc.IN1
+y1 => aXNORc.IN1
+y0 => bd.IN1
+y0 => bXORd.IN1
+y0 => NOTbORNOTd.IN1
+y3 <= y3~reg0.DB_MAX_OUTPUT_PORT_TYPE
+y2 <= y2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+yb1 <= yOne.DB_MAX_OUTPUT_PORT_TYPE
+yb0 <= bXORd.DB_MAX_OUTPUT_PORT_TYPE
 
 

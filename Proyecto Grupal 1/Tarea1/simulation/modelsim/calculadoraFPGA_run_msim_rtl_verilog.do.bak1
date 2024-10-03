@@ -45,9 +45,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto\ Grupal\ 1/Tarea1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/calculadoraFPGA.sv}
 vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto\ Grupal\ 1/Tarea1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoderFingers.sv}
-vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto\ Grupal\ 1/Tarea1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoderAcumulator.sv}
 
 vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto\ Grupal\ 1/Tarea1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoder_tb.sv}
 
