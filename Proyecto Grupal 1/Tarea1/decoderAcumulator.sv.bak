@@ -1,0 +1,12 @@
+module decoderAcumulator (
+   input clk,
+	input reset,
+	
+	input logic y3, y2, y1,y0,
+	output logic Y1, Y0
+
+);
+
+//y3 = A, y2 = B, y1 = C, y0 = D
+
+	wire NOTy3, NOTy2, NOTac, NOTab;

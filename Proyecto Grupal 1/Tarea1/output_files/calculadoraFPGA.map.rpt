@@ -1,5 +1,5 @@
 Analysis & Elaboration report for calculadoraFPGA
-Wed Oct  2 20:10:31 2024
+Wed Oct  2 21:23:11 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Oct  2 20:10:31 2024          ;
+; Analysis & Elaboration Status ; Successful - Wed Oct  2 21:23:11 2024          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; calculadoraFPGA                                ;
 ; Top-level Entity Name         ; decoderFingers                                 ;
@@ -161,7 +161,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct  2 20:10:20 2024
+    Info: Processing started: Wed Oct  2 21:23:00 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadoraFPGA -c calculadoraFPGA --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -173,11 +173,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
     Info (12023): Found entity 1: decoder_tb File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoder_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bin_to_7seg.sv
     Info (12023): Found entity 1: bin_to_7seg File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/bin_to_7seg.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decoderacumulator.sv
+    Info (12023): Found entity 1: decoderAcumulator File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoderAcumulator.sv Line: 1
 Info (12127): Elaborating entity "decoderFingers" for the top level hierarchy
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Wed Oct  2 20:10:31 2024
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Wed Oct  2 21:23:11 2024
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:25
 
 

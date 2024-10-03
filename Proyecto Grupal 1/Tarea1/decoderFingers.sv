@@ -13,7 +13,8 @@ module decoderFingers (
     and (NOTab, NOTa, b);        
 	 
     or  (y0, NOTc, NOTab);     
-    assign y1 = NOTac;         
+    assign y1 = NOTac; 
+
 
 endmodule
 
