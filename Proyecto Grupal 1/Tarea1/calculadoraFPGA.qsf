@@ -70,4 +70,17 @@ set_global_assignment -name SYSTEMVERILOG_FILE decoderAcumulator.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AB30 -to a
+set_location_assignment PIN_Y27 -to b
+set_location_assignment PIN_AB28 -to c
+set_location_assignment PIN_AC30 -to d
+set_location_assignment PIN_V25 -to clk
+set_location_assignment PIN_AC28 -to reset
+set_location_assignment PIN_W17 -to seg[0]
+set_location_assignment PIN_V18 -to seg[1]
+set_location_assignment PIN_AG17 -to seg[2]
+set_location_assignment PIN_AG16 -to seg[3]
+set_location_assignment PIN_AH17 -to seg[4]
+set_location_assignment PIN_AG18 -to seg[5]
+set_location_assignment PIN_AH18 -to seg[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
