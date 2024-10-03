@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/simulation/modelsim
 vdecoder_tb
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1727894526
+Z2 !s110 1727921518
 !i10b 1
 !s100 >bB7NZ@=2=FaIaC5=[<d^3
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
@@ -28,7 +28,7 @@ Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1727894526.000000
+Z6 !s108 1727921518.000000
 !s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoder_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoder_tb.sv|
 !i113 1
@@ -39,17 +39,17 @@ vdecoderFingers
 R1
 R2
 !i10b 1
-!s100 []WdEN[9;eg4Hf7U6ez=11
+!s100 WVYGh01L;kZfPiTEV1j`F3
 R3
-I2WGL=41L1z]T1Y9U:X`@^3
+IKS6HLO`oMNhEcAe^D9M7M0
 R4
 S1
 R0
-w1727894405
+w1727921415
 8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoderFingers.sv
 FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/decoderFingers.sv
 !i122 0
-L0 1 9
+L0 1 18
 R5
 r1
 !s85 0

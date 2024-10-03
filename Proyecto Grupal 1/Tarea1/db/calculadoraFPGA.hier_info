@@ -1,0 +1,11 @@
+|decoderFingers
+a => comb.IN0
+a => NOTab.IN0
+b => NOTab.IN1
+c => comb.IN1
+c => comb.IN1
+d => ~NO_FANOUT~
+y1 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+y0 <= comb.DB_MAX_OUTPUT_PORT_TYPE
+
+
