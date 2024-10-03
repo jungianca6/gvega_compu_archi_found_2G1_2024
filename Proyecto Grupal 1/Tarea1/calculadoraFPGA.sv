@@ -2,9 +2,9 @@ module calculadoraFPGA (
 		input logic a,b,c,d,
 		input clk,
 		input reset,
-		output logic [2:0] resultado,
-		output logic [3:0] display,
-		output logic y1, y0, yb1,yb0
+		output logic [1:0] display,
+		output logic [6:0] seg,
+		output logic y1,y0,yb1,yb0
 );
 
 	decoderFingers decoder1 (
@@ -26,5 +26,12 @@ module calculadoraFPGA (
 		  .yb1(yb1),
 		  .yb0(yb0)
     );
+	 
+	 bin_to_7seg decoder(
+		 .yb1(yb1),
+		 .yb0(yb0), 
+		 .display(display),
+		 .seg(seg)
+	);
 	 
 endmodule
