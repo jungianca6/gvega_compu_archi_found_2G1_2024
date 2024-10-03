@@ -1,5 +1,5 @@
 Analysis & Elaboration report for calculadoraFPGA
-Wed Oct  2 22:16:10 2024
+Wed Oct  2 22:22:19 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Oct  2 22:16:10 2024          ;
+; Analysis & Elaboration Status ; Successful - Wed Oct  2 22:22:19 2024          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; calculadoraFPGA                                ;
 ; Top-level Entity Name         ; calculadoraFPGA                                ;
@@ -172,7 +172,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Wed Oct  2 22:15:59 2024
+    Info: Processing started: Wed Oct  2 22:22:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off calculadoraFPGA -c calculadoraFPGA --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -194,8 +194,8 @@ Info (12128): Elaborating entity "decoderAcumulator" for hierarchy "decoderAcumu
 Info (12128): Elaborating entity "bin_to_7seg" for hierarchy "bin_to_7seg:decoder" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/Proyecto Grupal 1/Tarea1/calculadoraFPGA.sv Line: 33
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 3 warnings
     Info: Peak virtual memory: 4777 megabytes
-    Info: Processing ended: Wed Oct  2 22:16:10 2024
+    Info: Processing ended: Wed Oct  2 22:22:19 2024
     Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Total CPU time (on all processors): 00:00:24
 
 

@@ -8,7 +8,7 @@ module decoderAcumulator (
 );
 
 	wire NOTy3, NOTy2, NOTy1, NOTy0;
-	wire NOTbORNOTd, aXORc, aXNORc, firstHalf, secondHalf, bd, bXORd, yOne;
+	wire NOTbORNOTd, aXORc, aXNORc, firstHalf, secondHalf, bd, yZero, yOne;
 	
 	not (NOTy3, y3);            
    not (NOTy2, y2); 
@@ -26,8 +26,8 @@ module decoderAcumulator (
 	or (yOne, firstHalf, secondHalf); 
 	assign yb1 = yOne;              // ( (B' OR D') AND (A XOR C) ) OR ( (B AND D) AND (A XNOR C))
 	
-	xor (bXORd, y2, y0);            // B XOR D
-	assign yb0 = bXORd;
+	xor (yZero, y2, y0);            // B XOR D
+	assign yb0 = yZero;
 
 
 	

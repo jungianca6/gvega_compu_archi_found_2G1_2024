@@ -5,17 +5,17 @@ c => c.IN1
 d => d.IN1
 clk => clk.IN1
 reset => reset.IN1
-seg[0] <= bin_to_7seg:decoder.seg
-seg[1] <= bin_to_7seg:decoder.seg
-seg[2] <= bin_to_7seg:decoder.seg
-seg[3] <= bin_to_7seg:decoder.seg
-seg[4] <= bin_to_7seg:decoder.seg
-seg[5] <= bin_to_7seg:decoder.seg
-seg[6] <= bin_to_7seg:decoder.seg
-y1 <= y1.DB_MAX_OUTPUT_PORT_TYPE
-y0 <= y0.DB_MAX_OUTPUT_PORT_TYPE
-yb1 <= yb1.DB_MAX_OUTPUT_PORT_TYPE
-yb0 <= yb0.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] << bin_to_7seg:decoder.seg
+seg[1] << bin_to_7seg:decoder.seg
+seg[2] << bin_to_7seg:decoder.seg
+seg[3] << bin_to_7seg:decoder.seg
+seg[4] << bin_to_7seg:decoder.seg
+seg[5] << bin_to_7seg:decoder.seg
+seg[6] << bin_to_7seg:decoder.seg
+y1 << y1.DB_MAX_OUTPUT_PORT_TYPE
+y0 << y0.DB_MAX_OUTPUT_PORT_TYPE
+yb1 << yb1.DB_MAX_OUTPUT_PORT_TYPE
+yb0 << yb0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadoraFPGA|decoderFingers:decoder1
@@ -37,12 +37,12 @@ reset => y3~reg0.ACLR
 y1 => aXORc.IN1
 y1 => aXNORc.IN1
 y0 => bd.IN1
-y0 => bXORd.IN1
+y0 => yZero.IN1
 y0 => NOTbORNOTd.IN1
 y3 <= y3~reg0.DB_MAX_OUTPUT_PORT_TYPE
 y2 <= y2~reg0.DB_MAX_OUTPUT_PORT_TYPE
 yb1 <= yOne.DB_MAX_OUTPUT_PORT_TYPE
-yb0 <= bXORd.DB_MAX_OUTPUT_PORT_TYPE
+yb0 <= yZero.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadoraFPGA|bin_to_7seg:decoder
