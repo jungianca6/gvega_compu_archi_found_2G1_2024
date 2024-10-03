@@ -5,8 +5,6 @@ c => c.IN1
 d => d.IN1
 clk => clk.IN1
 reset => reset.IN1
-display[0] <= bin_to_7seg:decoder.display
-display[1] <= bin_to_7seg:decoder.display
 seg[0] <= bin_to_7seg:decoder.seg
 seg[1] <= bin_to_7seg:decoder.seg
 seg[2] <= bin_to_7seg:decoder.seg
@@ -48,18 +46,16 @@ yb0 <= bXORd.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |calculadoraFPGA|bin_to_7seg:decoder
-yb1 => ~NO_FANOUT~
-yb0 => ~NO_FANOUT~
-display[0] => Decoder0.IN1
-display[0] => seg[4].DATAIN
-display[1] => Decoder0.IN0
-display[1] => seg[6].DATAIN
+yb1 => Decoder0.IN0
+yb1 => seg[6].DATAIN
+yb0 => Decoder0.IN1
+yb0 => seg[4].DATAIN
 seg[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 seg[1] <= <GND>
 seg[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 seg[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-seg[4] <= display[0].DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= yb0.DB_MAX_OUTPUT_PORT_TYPE
 seg[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-seg[6] <= display[1].DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= yb1.DB_MAX_OUTPUT_PORT_TYPE
 
 

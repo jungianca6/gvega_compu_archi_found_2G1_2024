@@ -1,5 +1,5 @@
 Flow report for calculadoraFPGA
-Wed Oct  2 22:04:12 2024
+Wed Oct  2 22:16:10 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Wed Oct  2 22:04:12 2024          ;
+; Flow Status                 ; Successful - Wed Oct  2 22:16:10 2024          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; calculadoraFPGA                                ;
 ; Top-level Entity Name       ; calculadoraFPGA                                ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/02/2024 22:04:02 ;
+; Start date & time ; 10/02/2024 22:16:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; calculadoraFPGA     ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 194080957758903.172792824123020        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 194080957758903.172792895908728        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; decoder_tb                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
