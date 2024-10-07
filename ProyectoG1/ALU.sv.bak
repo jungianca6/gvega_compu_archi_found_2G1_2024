@@ -1,6 +1,6 @@
-module ALU # (parameter n = 2)(
+module ALU # (parameter n = 4)(
 	input logic [n-1:0] a, b,   	// entradas u operandos
-	input logic [2:0] Operator, 	// codigo para la operacion
+	input logic [3:0] Operator, 	// codigo para la operacion
 	output logic [n-1:0] Result,// resultado de la operacion
 	output logic [n-1:0] binaryResult,
 	output logic [6:0] display1,
@@ -13,11 +13,16 @@ module ALU # (parameter n = 2)(
 	//logic [n-1:0] extended_result; // resultado extendido para operaciones como MUL y DIV
 
 	// definición de códigos de operación
-	localparam [2:0] ADD = 3'b000,
-						  SUB = 3'b001,
-						  AND = 3'b010,
-						  OR  = 3'b011,
-						  XOR = 3'b111;
+	localparam [3:0] ADD = 4'b0000,
+						  SUB = 4'b0001,
+						  MUL = 4'b0010,
+						  DIV = 4'b0011,
+						  MOD = 4'b0100,
+						  AND = 4'b0101,
+						  OR  = 4'b0110,
+						  XOR = 4'b0111,
+						  SHL = 4'b1000,
+						  SHR = 4'b1001; 
 
 	// Instancia del full_adder_nb
 	wire [n-1:0] adder_result;
@@ -40,10 +45,20 @@ module ALU # (parameter n = 2)(
 		 .Result(subtractor_result),
 		 .Cout(subtractor_cout)
 	);
+
+	// Instancia del multiplier
+	wire [n-1:0] multiplier_result;
+	wire [n-1:0] multiplier_Overf;
+	multiplier_nb #(n) multiplier_inst (
+		 .a(a),
+		 .b(b),
+		 .Overf(multiplier_Overf),
+		 .Result(multiplier_result)
+	);
 	
 	// Instancia del decoder
 	Decoder decoder_inst (
-		 .bin1(Result[n-1:0]),
+		 .bin1(Result[3:0]),
 		 .bin2(Operator),
 		 .hex_result1(display1),
 		 .hex_result2(display2)
@@ -66,6 +81,17 @@ module ALU # (parameter n = 2)(
 				  V = (a[n-1] ^ subtractor_result[n-1]) & (a[n-1] ^ b[n-1]);
 			end
 			
+			MUL: begin
+				  Result = {multiplier_Overf, multiplier_result}; // multiplicacion
+				  C = |multiplier_Overf;
+			end
+			
+			DIV: begin
+				  Result = a / b; // División
+			end
+			MOD: begin
+				  Result = a % b; // Módulo
+			end
 			AND: begin
 				  Result = a & b; // AND
 			end
@@ -74,7 +100,14 @@ module ALU # (parameter n = 2)(
 			end
 			XOR: begin
 				  Result = a ^ b; // XOR
-			end		
+			end
+			SHL: begin
+				  Result = a << b; // Shift left
+			end
+			SHR: begin
+				  Result = a >> b; // Shift right
+			end
+			
 			default: Result = {n{1'b0}}; // En caso de operación desconocida
 		
 		endcase
