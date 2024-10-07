@@ -67,9 +67,6 @@ module ALU # (parameter n = 2)(
 			end
 			OR: begin
 				  Result = a | b; // OR
-			end
-			XOR: begin
-				  Result = a ^ b; // XOR
 			end		
 			default: Result = {n{1'b0}}; // En caso de operación desconocida
 		
