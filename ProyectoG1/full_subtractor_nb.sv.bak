@@ -1,6 +1,6 @@
 module full_subtractor_nb #(
     // número de bits (4 por defecto)
-    parameter n = 2
+    parameter n = 4
 )(
     // parámetros de entrada
     input wire [n-1:0] a,

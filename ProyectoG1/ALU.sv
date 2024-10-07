@@ -10,8 +10,6 @@ module ALU # (parameter n = 2)(
 											// Negativo(N), Cero(Z), Acarreo(C), Desbordamiento (V) 
 );
 
-	//logic [n-1:0] extended_result; // resultado extendido para operaciones como MUL y DIV
-
 	// definición de códigos de operación
 	localparam [2:0] ADD = 3'b000,
 						  SUB = 3'b001,
@@ -51,7 +49,6 @@ module ALU # (parameter n = 2)(
 						  
 	always_comb begin
 		{N, Z, C, V} = 4'b0; // inicializacion de las banderas en "0000"
-		//extended_result = {2*n{1'b0}}; // inicializacion del resultado extendido en "n...0"
 		
 		case(Operator)
 			ADD: begin
