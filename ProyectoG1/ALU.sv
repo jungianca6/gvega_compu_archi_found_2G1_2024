@@ -1,6 +1,6 @@
 module ALU # (parameter n = 2)(
 	input logic [n-1:0] a, b,   	// entradas u operandos
-	input logic [2:0] Operator, 	// codigo para la operacion
+	input logic [1:0] Operator, 	// codigo para la operacion
 	output logic [n-1:0] Result,// resultado de la operacion
 	output logic [n-1:0] binaryResult,
 	output logic [6:0] display1,
@@ -11,11 +11,10 @@ module ALU # (parameter n = 2)(
 );
 
 	// definición de códigos de operación
-	localparam [2:0] ADD = 3'b000,
-						  SUB = 3'b001,
-						  AND = 3'b010,
-						  OR  = 3'b011,
-						  XOR = 3'b111;
+	localparam [1:0] ADD = 2'b00,
+						  SUB = 2'b01,
+						  AND = 2'b10,
+						  OR  = 2'b11,
 
 	// Instancia del full_adder_nb
 	wire [n-1:0] adder_result;
