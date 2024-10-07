@@ -3,13 +3,12 @@ a[0] => a[0].IN2
 a[1] => a[1].IN2
 b[0] => b[0].IN2
 b[1] => b[1].IN2
-Operator[0] => Operator[0].IN1
-Operator[1] => Operator[1].IN1
-Operator[2] => Operator[2].IN1
+Operator[0] => Operator[0].IN4
+Operator[1] => Operator[1].IN2
 Result[0] <= Result[0].DB_MAX_OUTPUT_PORT_TYPE
-Result[1] <= binaryResult[1].DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
 binaryResult[0] <= Result[0].DB_MAX_OUTPUT_PORT_TYPE
-binaryResult[1] <= binaryResult[1].DB_MAX_OUTPUT_PORT_TYPE
+binaryResult[1] <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
 display1[0] <= Decoder:decoder_inst.hex_result1
 display1[1] <= Decoder:decoder_inst.hex_result1
 display1[2] <= Decoder:decoder_inst.hex_result1
@@ -24,10 +23,10 @@ display2[3] <= Decoder:decoder_inst.hex_result2
 display2[4] <= Decoder:decoder_inst.hex_result2
 display2[5] <= Decoder:decoder_inst.hex_result2
 display2[6] <= Decoder:decoder_inst.hex_result2
-N <= binaryResult[1].DB_MAX_OUTPUT_PORT_TYPE
+N <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
 Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
-C <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
-V <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+C <= mux_2to1:cout_mux.y
+V <= mux_2to1:overflow_mux.y
 
 
 |ALU|full_adder_nb:adder_inst
@@ -101,27 +100,58 @@ Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ALU|Decoder:decoder_inst
-bin1[0] => Decoder0.IN3
-bin1[1] => Decoder0.IN2
-bin1[2] => Decoder0.IN1
-bin1[3] => Decoder0.IN0
-bin2[0] => Decoder1.IN3
-bin2[1] => Decoder1.IN2
-bin2[2] => Decoder1.IN1
-bin2[3] => Decoder1.IN0
-hex_result1[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[0] <= WideOr13.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[1] <= WideOr12.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[2] <= WideOr11.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[3] <= WideOr10.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[4] <= WideOr9.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[5] <= WideOr8.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[6] <= WideOr7.DB_MAX_OUTPUT_PORT_TYPE
+bin1[0] => Decoder0.IN1
+bin1[0] => hex_result1[4].DATAIN
+bin1[1] => Decoder0.IN0
+bin1[1] => hex_result1[6].DATAIN
+bin2[0] => Decoder1.IN1
+bin2[0] => hex_result2[4].DATAIN
+bin2[1] => Decoder1.IN0
+bin2[1] => hex_result2[6].DATAIN
+hex_result1[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+hex_result1[1] <= <GND>
+hex_result1[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+hex_result1[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+hex_result1[4] <= bin1[0].DB_MAX_OUTPUT_PORT_TYPE
+hex_result1[5] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+hex_result1[6] <= bin1[1].DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[1] <= <GND>
+hex_result2[2] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[3] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[4] <= bin2[0].DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[5] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+hex_result2[6] <= bin2[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_4to1:result_mux
+d0[0] => Mux1.IN0
+d0[1] => Mux0.IN0
+d1[0] => Mux1.IN1
+d1[1] => Mux0.IN1
+d2[0] => Mux1.IN2
+d2[1] => Mux0.IN2
+d3[0] => Mux1.IN3
+d3[1] => Mux0.IN3
+sel[0] => Mux0.IN5
+sel[0] => Mux1.IN5
+sel[1] => Mux0.IN4
+sel[1] => Mux1.IN4
+y[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_2to1:cout_mux
+d0[0] => y.DATAA
+d1[0] => y.DATAB
+sel => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_2to1:overflow_mux
+d0[0] => y.DATAA
+d1[0] => y.DATAB
+sel => y.OUTPUTSELECT
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 

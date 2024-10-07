@@ -1,5 +1,5 @@
 Analysis & Elaboration report for pwmALU
-Sun Oct  6 21:17:32 2024
+Mon Oct  7 00:06:27 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -12,12 +12,14 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   4. Parameter Settings for User Entity Instance: Top-level Entity: |ALU
   5. Parameter Settings for User Entity Instance: full_adder_nb:adder_inst
   6. Parameter Settings for User Entity Instance: full_subtractor_nb:subtractor_inst
-  7. Analysis & Elaboration Settings
-  8. Port Connectivity Checks: "Decoder:decoder_inst"
-  9. Port Connectivity Checks: "full_subtractor_nb:subtractor_inst"
- 10. Port Connectivity Checks: "full_adder_nb:adder_inst"
- 11. Analysis & Elaboration Messages
- 12. Analysis & Elaboration Suppressed Messages
+  7. Parameter Settings for User Entity Instance: mux_4to1:result_mux
+  8. Parameter Settings for User Entity Instance: mux_2to1:cout_mux
+  9. Parameter Settings for User Entity Instance: mux_2to1:overflow_mux
+ 10. Analysis & Elaboration Settings
+ 11. Port Connectivity Checks: "full_subtractor_nb:subtractor_inst"
+ 12. Port Connectivity Checks: "full_adder_nb:adder_inst"
+ 13. Analysis & Elaboration Messages
+ 14. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -44,7 +46,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                 ;
 +-------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Oct  6 21:17:32 2024          ;
+; Analysis & Elaboration Status ; Successful - Mon Oct  7 00:06:27 2024          ;
 ; Quartus Prime Version         ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                 ; pwmALU                                         ;
 ; Top-level Entity Name         ; ALU                                            ;
@@ -102,6 +104,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+--------------------------------------------------------+
 ; n              ; 2     ; Signed Integer                                         ;
 +----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_4to1:result_mux ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; n              ; 2     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_2to1:cout_mux ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; n              ; 1     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux_2to1:overflow_mux ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; n              ; 1     ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -192,16 +224,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decoder:decoder_inst"                                                                                                                       ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; bin1 ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "bin1[3..2]" will be connected to GND. ;
-; bin2 ; Input ; Warning  ; Input port expression (3 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "bin2[3..3]" will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +----------------------------------------------------------------+
 ; Port Connectivity Checks: "full_subtractor_nb:subtractor_inst" ;
 +------+-------+----------+--------------------------------------+
@@ -226,10 +248,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Sun Oct  6 21:17:20 2024
+    Info: Processing started: Mon Oct  7 00:06:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pwmALU -c pwmALU --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4to1.sv
+    Info (12023): Found entity 1: mux_4to1 File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.sv
+    Info (12023): Found entity 1: mux_2to1 File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_subtractor_nb.sv
     Info (12023): Found entity 1: full_subtractor_nb File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_subtractor_1b.sv
@@ -245,18 +271,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file decoder
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: ALU File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 1
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Info (12128): Elaborating entity "full_adder_nb" for hierarchy "full_adder_nb:adder_inst" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 29
+Info (12128): Elaborating entity "full_adder_nb" for hierarchy "full_adder_nb:adder_inst" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 25
 Info (12128): Elaborating entity "full_adder_1b" for hierarchy "full_adder_nb:adder_inst|full_adder_1b:gen_adder[0].adder" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv Line: 29
-Info (12128): Elaborating entity "full_subtractor_nb" for hierarchy "full_subtractor_nb:subtractor_inst" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 40
+Info (12128): Elaborating entity "full_subtractor_nb" for hierarchy "full_subtractor_nb:subtractor_inst" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 36
 Info (12128): Elaborating entity "full_subtractor_1b" for hierarchy "full_subtractor_nb:subtractor_inst|full_subtractor_1b:gen_subtractor[0].subtractor" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv Line: 29
 Info (12128): Elaborating entity "Decoder" for hierarchy "Decoder:decoder_inst" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 48
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "mux_4to1" for hierarchy "mux_4to1:result_mux" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 59
+Info (12128): Elaborating entity "mux_2to1" for hierarchy "mux_2to1:cout_mux" File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 68
 Info (144001): Generated suppressed messages file C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/output_files/pwmALU.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4774 megabytes
-    Info: Processing ended: Sun Oct  6 21:17:32 2024
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4777 megabytes
+    Info: Processing ended: Mon Oct  7 00:06:27 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:25
 
 
 +--------------------------------------------+

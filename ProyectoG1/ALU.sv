@@ -9,12 +9,9 @@ module ALU # (parameter n = 2)(
 	output logic N, Z, C, V		 	// banderas de estado:
 											// Negativo(N), Cero(Z), Acarreo(C), Desbordamiento (V) 
 );
-
-	// definición de códigos de operación
-	localparam [1:0] ADD = 2'b00,
-						  SUB = 2'b01,
-						  AND = 2'b10,
-						  OR  = 2'b11,
+						  
+	wire [n-1:0] and_result, or_result;
+	wire sum_overflow, sub_overflow;
 
 	// Instancia del full_adder_nb
 	wire [n-1:0] adder_result;
@@ -38,6 +35,10 @@ module ALU # (parameter n = 2)(
 		 .Cout(subtractor_cout)
 	);
 	
+	assign and_result = a & b;  //AND
+	assign or_result = a | b;   //OR
+	
+	
 	// Instancia del decoder
 	Decoder decoder_inst (
 		 .bin1(Result[n-1:0]),
@@ -45,38 +46,47 @@ module ALU # (parameter n = 2)(
 		 .hex_result1(display1),
 		 .hex_result2(display2)
 	);
-						  
-	always_comb begin
-		{N, Z, C, V} = 4'b0; // inicializacion de las banderas en "0000"
-		
-		case(Operator)
-			ADD: begin
-				  Result = adder_result; // suma
-				  C = adder_cout;
-				  V = (a[n-1] == b[n-1]) && (adder_result[n-1] != a[n-1]);
-			end
-			
-			SUB: begin
-				  Result = subtractor_result; // Resta
-				  C = subtractor_cout;
-				  V = (a[n-1] ^ subtractor_result[n-1]) & (a[n-1] ^ b[n-1]);
-			end
-			
-			AND: begin
-				  Result = a & b; // AND
-			end
-			OR: begin
-				  Result = a | b; // OR
-			end		
-			default: Result = {n{1'b0}}; // En caso de operación desconocida
-		
-		endcase
-		
-		N = Result[n-1];
-		Z = (Result == {n{1'b0}});
-		
-		binaryResult = Result;
-		
-	end
+	
+	// Instancias de multiplexores para seleccionar la operación
+    wire [n-1:0] selected_result;
+    mux_4to1 #(n) result_mux (
+        .d0(adder_result), 
+        .d1(subtractor_result), 
+        .d2(and_result), 
+        .d3(or_result), 
+        .sel(Operator[1:0]), // Se asume que solo se usan los primeros 2 bits de Operator
+        .y(selected_result)
+    );
+
+    // Mux para el carry o borrow
+    wire selected_cout;
+    mux_2to1 #(1) cout_mux (
+        .d0(adder_cout), 
+        .d1(subtractor_cout), 
+        .sel(Operator[0]), 
+        .y(selected_cout)
+    );
+	 
+	 assign sum_overflow = (a[n-1] == b[n-1]) && (Result[n-1] != a[n-1]);
+    assign sub_overflow = (a[n-1] ^ subtractor_result[n-1]) & (a[n-1] ^ b[n-1]);
+	 
+	 wire selected_V;
+    mux_2to1 #(1) overflow_mux (
+        .d0(sum_overflow), 
+        .d1(sub_overflow), 
+        .sel(Operator[0]), 
+        .y(selected_V)
+    );
+	 
+	 // Asignación de resultados finales
+    assign Result = selected_result;
+	 assign binaryResult = Result;
+	 
+	 // Banderas de estado
+    assign C = selected_cout;
+    assign N = Result[n-1];
+    assign Z = (Result == {n{1'b0}});
+	 assign V = selected_V;
+	 
 	
 endmodule
