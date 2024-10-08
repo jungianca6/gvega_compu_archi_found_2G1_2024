@@ -68,4 +68,30 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_location_assignment PIN_AD24 -to N
+set_location_assignment PIN_AC23 -to Z
+set_location_assignment PIN_AB23 -to C
+set_location_assignment PIN_AA24 -to V
+set_location_assignment PIN_AF25 -to binaryResult[0]
+set_location_assignment PIN_AE24 -to binaryResult[1]
+set_location_assignment PIN_AB30 -to a[0]
+set_location_assignment PIN_Y27 -to a[1]
+set_location_assignment PIN_AC30 -to b[0]
+set_location_assignment PIN_W25 -to b[1]
+set_location_assignment PIN_AC28 -to Operator[0]
+set_location_assignment PIN_AD30 -to Operator[1]
+set_location_assignment PIN_W17 -to display1[0]
+set_location_assignment PIN_V18 -to display1[1]
+set_location_assignment PIN_AG17 -to display1[2]
+set_location_assignment PIN_AG16 -to display1[3]
+set_location_assignment PIN_AH17 -to display1[4]
+set_location_assignment PIN_AG18 -to display1[5]
+set_location_assignment PIN_AH18 -to display1[6]
+set_location_assignment PIN_AF16 -to display2[0]
+set_location_assignment PIN_V16 -to display2[1]
+set_location_assignment PIN_AE16 -to display2[2]
+set_location_assignment PIN_AD17 -to display2[3]
+set_location_assignment PIN_AE18 -to display2[4]
+set_location_assignment PIN_AE17 -to display2[5]
+set_location_assignment PIN_V17 -to display2[6]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

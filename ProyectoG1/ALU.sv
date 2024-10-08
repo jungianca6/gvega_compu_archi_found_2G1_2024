@@ -63,7 +63,7 @@ module ALU # (parameter n = 2)(
     mux_2to1 #(1) cout_mux (
         .d0(adder_cout), 
         .d1(subtractor_cout), 
-        .sel(Operator[0]), 
+        .sel(Operator[1:0]), 
         .y(selected_cout)
     );
 	 
@@ -74,7 +74,7 @@ module ALU # (parameter n = 2)(
     mux_2to1 #(1) overflow_mux (
         .d0(sum_overflow), 
         .d1(sub_overflow), 
-        .sel(Operator[0]), 
+        .sel(Operator[1:0]), 
         .y(selected_V)
     );
 	 
