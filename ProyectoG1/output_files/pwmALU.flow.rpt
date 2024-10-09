@@ -1,5 +1,5 @@
 Flow report for pwmALU
-Tue Oct  8 23:05:51 2024
+Tue Oct  8 23:41:33 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -41,10 +41,10 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------------------+
 ; Flow Summary                                                                 ;
 +-----------------------------+------------------------------------------------+
-; Flow Status                 ; Successful - Tue Oct  8 23:05:51 2024          ;
+; Flow Status                 ; Successful - Tue Oct  8 23:41:33 2024          ;
 ; Quartus Prime Version       ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name               ; pwmALU                                         ;
-; Top-level Entity Name       ; ALU                                            ;
+; Top-level Entity Name       ; Decoder                                        ;
 ; Family                      ; Cyclone V                                      ;
 ; Device                      ; 5CSXFC6D6F31C6                                 ;
 ; Timing Models               ; Final                                          ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/08/2024 23:05:41 ;
+; Start date & time ; 10/08/2024 23:41:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pwmALU              ;
 +-------------------+---------------------+
@@ -74,33 +74,37 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 194080957758903.172845034044724        ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 194080957758903.172845248209952        ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux2to1_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; Decoder_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4to1_tb                        ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; mux2to1_tb                             ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; Decoder_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim (SystemVerilog)               ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; mux2to1_tb.sv                          ; --            ; --          ; mux2to1_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; Decoder_tb.sv                          ; --            ; --          ; Decoder_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; mux4to1_tb.sv                          ; --            ; --          ; mux4to1_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mux2to1_tb                             ; --            ; --          ; mux2to1_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; Decoder_tb                             ; --            ; --          ; Decoder_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mux4to1_tb                             ; --            ; --          ; mux4to1_tb                        ;
 ; EDA_TEST_BENCH_NAME                  ; mux4to1_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; mux2to1_tb                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; Decoder_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; ALU         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; ALU         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; ALU         ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; Decoder     ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; Decoder     ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; Decoder     ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; ALU                                    ; pwmALU        ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; Decoder                                ; pwmALU        ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -109,8 +113,8 @@ https://fpgasoftware.intel.com/eula.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4774 MB             ; 00:00:26                           ;
-; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Elaboration ; 00:00:11     ; 1.0                     ; 4783 MB             ; 00:00:27                           ;
+; Total                  ; 00:00:11     ; --                      ; --                  ; 00:00:27                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

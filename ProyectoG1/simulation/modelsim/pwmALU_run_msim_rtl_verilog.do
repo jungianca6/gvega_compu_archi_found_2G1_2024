@@ -45,11 +45,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv}
 
-vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux2to1_tb.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  mux2to1_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Decoder_tb
 
 add wave *
 view structure
