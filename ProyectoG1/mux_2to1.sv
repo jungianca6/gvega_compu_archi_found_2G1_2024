@@ -1,17 +1,25 @@
 module mux_2to1 #(
     parameter n = 2 // Ancho de las entradas y salida
 )(
-    input logic [n-1:0] d0, d1, // Entradas de datos
-    input logic [1:0] sel,             // Selector de 1 bit
-    output logic [n-1:0] y       // Salida seleccionada
+    input logic [n-1:0] d0, d1,    // Entradas de datos
+    input logic [1:0] sel,         // Selector de 2 bits
+    output logic [n-1:0] y         // Salida seleccionada
 );
 
-    always_comb begin
-        case (sel)
-            2'b00: y = d0;
-            2'b01: y = d1;
-            default: y = {n{1'b0}}; 
-        endcase
-    end
+    wire nSel0, nSel1;
+    wire [n-1:0] and_d0, and_d1;
+    
+    // Generar los inversores para los selectores	 
+	 not (nSel0, sel[0]);
+	 not (nSel1, sel[1]);
+    
+    // AND lógico para seleccionar d0 cuando sel es 00
+    assign and_d0 = {n{nSel1 & nSel0}} & d0;
+    
+    // AND lógico para seleccionar d1 cuando sel es 01
+    assign and_d1 = {n{nSel1 & sel[0]}} & d1;
+    
+    // OR lógico para obtener la salida
+    assign y = and_d0 | and_d1;
 
 endmodule
