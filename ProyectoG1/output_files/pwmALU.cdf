@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSXFC6D6F31) Path("C:/Users/Dell/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/output_files/") File("pwmALU.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSXFC6D6F31) Path("C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/output_files/") File("pwmALU.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
