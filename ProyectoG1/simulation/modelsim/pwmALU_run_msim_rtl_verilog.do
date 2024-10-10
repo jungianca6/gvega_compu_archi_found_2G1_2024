@@ -45,7 +45,14 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_1b.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_1b.sv}
 vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv}
+vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv}
 
 vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv}
 

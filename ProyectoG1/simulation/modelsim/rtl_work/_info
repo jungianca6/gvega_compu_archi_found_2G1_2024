@@ -9,32 +9,59 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/simulation/modelsim
-vDecoder
+vALU
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1728527063
+Z2 !s110 1728533145
+!i10b 1
+!s100 Id8zUbjNHF=ZaaVT@A4z52
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IiPbLa6LDQ`A]U;:NIQ0QM3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1728526741
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv
+!i122 7
+L0 1 95
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1728533144.000000
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1
+Z9 tCvgOpt 0
+n@a@l@u
+vDecoder
+R1
+Z10 !s110 1728533144
 !i10b 1
 !s100 ^POUekU>L0[Ln7fmU8MW<2
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+R3
 IQNJmo:gh:Tf4CBMmWOg5n2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+R4
 S1
 R0
 w1728526924
 8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv
 FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv
-!i122 0
+!i122 6
 L0 2 33
-Z5 OV;L;2020.1;71
+R5
 r1
 !s85 0
 31
-Z6 !s108 1728527063.000000
+R6
 !s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv|
 !i113 1
-Z7 o-sv -work work
-Z8 !s92 -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1
-Z9 tCvgOpt 0
+R7
+R8
+R9
 n@decoder
 vDecoder_tb
 R1
@@ -49,13 +76,13 @@ R0
 w1728526946
 8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv
 FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv
-!i122 1
+!i122 8
 L0 1 29
 R5
 r1
 !s85 0
 31
-R6
+!s108 1728533145.000000
 !s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv|
 !i113 1
@@ -63,3 +90,159 @@ R7
 R8
 R9
 n@decoder_tb
+vfull_adder_1b
+R1
+R10
+!i10b 1
+!s100 ]RJMg62]Wm61P<enI@`eX3
+R3
+I1TA3l[X`dDC5hFHI1nn290
+R4
+S1
+R0
+Z11 w1728265952
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_1b.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_1b.sv
+!i122 5
+Z12 L0 1 17
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_1b.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_1b.sv|
+!i113 1
+R7
+R8
+R9
+vfull_adder_nb
+R1
+R10
+!i10b 1
+!s100 >JDIM;hfWcFojjYO6JnNI3
+R3
+IilHW]V;6RE?<lbQYN<NLj3
+R4
+S1
+R0
+w1728271038
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv
+!i122 4
+Z13 L0 1 36
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_adder_nb.sv|
+!i113 1
+R7
+R8
+R9
+vfull_subtractor_1b
+R1
+R10
+!i10b 1
+!s100 8E:YI5k9=Z>Ml7k806K2b1
+R3
+IUdSGE681kl`HedPh^Hg[H3
+R4
+S1
+R0
+R11
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_1b.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_1b.sv
+!i122 3
+R12
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_1b.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_1b.sv|
+!i113 1
+R7
+R8
+R9
+vfull_subtractor_nb
+R1
+R10
+!i10b 1
+!s100 fQC_cgB`Q8Q`;f1fc3I2m0
+R3
+I3R>B49FY;X[c1>mhKf0Ah3
+R4
+S1
+R0
+w1728271039
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv
+!i122 2
+R13
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/full_subtractor_nb.sv|
+!i113 1
+R7
+R8
+R9
+vmux_2to1
+R1
+R10
+!i10b 1
+!s100 GJ<zfEHS:FLZ1l>:jAC6>1
+R3
+Izki9DYKkA;PW_@]7dmE523
+R4
+S1
+R0
+w1728448837
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv
+!i122 1
+L0 1 25
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_2to1.sv|
+!i113 1
+R7
+R8
+R9
+vmux_4to1
+R1
+R10
+!i10b 1
+!s100 mJfUURbgZEiZdkJLR3d8S1
+R3
+I@P?QQEIi17Te`QT9_cKDV3
+R4
+S1
+R0
+w1728448698
+8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv
+FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv
+!i122 0
+L0 1 26
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/mux_4to1.sv|
+!i113 1
+R7
+R8
+R9
