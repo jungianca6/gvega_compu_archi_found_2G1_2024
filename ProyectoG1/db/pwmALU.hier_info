@@ -1,33 +1,182 @@
-|Decoder
-bin1[0] => hex_result1.IN0
-bin1[0] => hex_result1.IN0
-bin1[0] => hex_result1.IN0
-bin1[0] => hex_result1.IN0
-bin1[1] => hex_result1.IN1
-bin1[1] => hex_result1.IN1
-bin1[1] => hex_result1.IN1
-bin1[1] => hex_result1.IN1
-bin2[0] => hex_result2.IN0
-bin2[0] => hex_result2.IN0
-bin2[0] => hex_result2.IN0
-bin2[0] => hex_result2.IN0
-bin2[1] => hex_result2.IN1
-bin2[1] => hex_result2.IN1
-bin2[1] => hex_result2.IN1
-bin2[1] => hex_result2.IN1
-hex_result1[0] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[1] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[2] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[3] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[4] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[5] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result1[6] <= hex_result1.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[0] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[1] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[2] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[3] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[4] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[5] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
-hex_result2[6] <= hex_result2.DB_MAX_OUTPUT_PORT_TYPE
+|ALU
+a[0] => a[0].IN2
+a[1] => a[1].IN2
+b[0] => b[0].IN2
+b[1] => b[1].IN2
+Operator[0] => Operator[0].IN4
+Operator[1] => Operator[1].IN4
+Result[0] <= Result[0].DB_MAX_OUTPUT_PORT_TYPE
+Result[1] <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
+binaryResult[0] <= Result[0].DB_MAX_OUTPUT_PORT_TYPE
+binaryResult[1] <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
+display1[0] <= Decoder:result.hex_result
+display1[1] <= Decoder:result.hex_result
+display1[2] <= Decoder:result.hex_result
+display1[3] <= Decoder:result.hex_result
+display1[4] <= Decoder:result.hex_result
+display1[5] <= Decoder:result.hex_result
+display1[6] <= Decoder:result.hex_result
+display2[0] <= Decoder:operator.hex_result
+display2[1] <= Decoder:operator.hex_result
+display2[2] <= Decoder:operator.hex_result
+display2[3] <= Decoder:operator.hex_result
+display2[4] <= Decoder:operator.hex_result
+display2[5] <= Decoder:operator.hex_result
+display2[6] <= Decoder:operator.hex_result
+N <= Result[1].DB_MAX_OUTPUT_PORT_TYPE
+Z <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+C <= mux_2to1:cout_mux.y
+V <= mux_2to1:overflow_mux.y
+
+
+|ALU|full_adder_nb:adder_inst
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+Cin => Carry[0].IN1
+Sum[0] <= full_adder_1b:gen_adder[0].adder.Sum
+Sum[1] <= full_adder_1b:gen_adder[1].adder.Sum
+Cout <= full_adder_1b:gen_adder[1].adder.Cout
+
+
+|ALU|full_adder_nb:adder_inst|full_adder_1b:gen_adder[0].adder
+a => Sum.IN0
+a => Cout.IN0
+b => Sum.IN1
+b => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|full_adder_nb:adder_inst|full_adder_1b:gen_adder[1].adder
+a => Sum.IN0
+a => Cout.IN0
+b => Sum.IN1
+b => Cout.IN1
+Cin => Sum.IN1
+Cin => Cout.IN1
+Sum <= Sum.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|full_subtractor_nb:subtractor_inst
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+Cin => Borrow[0].IN1
+Result[0] <= full_subtractor_1b:gen_subtractor[0].subtractor.Result
+Result[1] <= full_subtractor_1b:gen_subtractor[1].subtractor.Result
+Cout <= full_subtractor_1b:gen_subtractor[1].subtractor.Cout
+
+
+|ALU|full_subtractor_nb:subtractor_inst|full_subtractor_1b:gen_subtractor[0].subtractor
+a => Result.IN0
+a => Cout.IN0
+a => Cout.IN0
+b => Result.IN1
+b => Cout.IN1
+b => Cout.IN1
+Cin => Result.IN1
+Cin => Cout.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|full_subtractor_nb:subtractor_inst|full_subtractor_1b:gen_subtractor[1].subtractor
+a => Result.IN0
+a => Cout.IN0
+a => Cout.IN0
+b => Result.IN1
+b => Cout.IN1
+b => Cout.IN1
+Cin => Result.IN1
+Cin => Cout.IN1
+Result <= Result.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Decoder:result
+bin[0] => hex_result.IN0
+bin[0] => hex_result.IN0
+bin[0] => hex_result.IN0
+bin[0] => hex_result[4].DATAIN
+bin[0] => hex_result.IN0
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result[6].DATAIN
+hex_result[0] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[1] <= <GND>
+hex_result[2] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[3] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[4] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+hex_result[5] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[6] <= bin[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|Decoder:operator
+bin[0] => hex_result.IN0
+bin[0] => hex_result.IN0
+bin[0] => hex_result.IN0
+bin[0] => hex_result[4].DATAIN
+bin[0] => hex_result.IN0
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result.IN1
+bin[1] => hex_result[6].DATAIN
+hex_result[0] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[1] <= <GND>
+hex_result[2] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[3] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[4] <= bin[0].DB_MAX_OUTPUT_PORT_TYPE
+hex_result[5] <= hex_result.DB_MAX_OUTPUT_PORT_TYPE
+hex_result[6] <= bin[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_4to1:result_mux
+d0[0] => andOUT0[0].IN1
+d0[1] => andOUT0[1].IN1
+d1[0] => andOUT1[0].IN1
+d1[1] => andOUT1[1].IN1
+d2[0] => andOUT2[0].IN1
+d2[1] => andOUT2[1].IN1
+d3[0] => andOUT3[0].IN1
+d3[1] => andOUT3[1].IN1
+sel[0] => andOUT1.IN0
+sel[0] => andOUT3.IN0
+sel[0] => andOUT0.IN0
+sel[0] => andOUT2.IN0
+sel[1] => andOUT2.IN1
+sel[1] => andOUT3.IN1
+sel[1] => andOUT0.IN1
+sel[1] => andOUT1.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_2to1:cout_mux
+d0[0] => and_d0[0].IN1
+d1[0] => and_d1[0].IN1
+sel[0] => and_d1.IN0
+sel[0] => and_d0.IN0
+sel[1] => and_d0.IN1
+sel[1] => and_d1.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ALU|mux_2to1:overflow_mux
+d0[0] => and_d0[0].IN1
+d1[0] => and_d1[0].IN1
+sel[0] => and_d1.IN0
+sel[0] => and_d0.IN0
+sel[1] => and_d0.IN1
+sel[1] => and_d1.IN1
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 

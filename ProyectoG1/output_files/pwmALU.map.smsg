@@ -1,1 +1,3 @@
 Info (10281): Verilog HDL Declaration information at ALU.sv(1): object "n" differs only in case from object "N" in the same scope File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 1
+Info (10281): Verilog HDL Declaration information at ALU.sv(4): object "Result" differs only in case from object "result" in the same scope File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 4
+Info (10281): Verilog HDL Declaration information at ALU.sv(3): object "Operator" differs only in case from object "operator" in the same scope File: C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/ALU.sv Line: 3

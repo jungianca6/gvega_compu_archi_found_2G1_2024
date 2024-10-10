@@ -11,24 +11,24 @@ cModel Technology
 Z0 dC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/simulation/modelsim
 vDecoder
 Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z2 !s110 1728452571
+Z2 !s110 1728527063
 !i10b 1
-!s100 L9JjVAaTzm;MLcK8TbLKC0
+!s100 ^POUekU>L0[Ln7fmU8MW<2
 Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IU15eCjzTRD[HhH^=cgLUH0
+IQNJmo:gh:Tf4CBMmWOg5n2
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1728452244
+w1728526924
 8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv
 FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv
 !i122 0
-L0 2 55
+L0 2 33
 Z5 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1728452571.000000
+Z6 !s108 1728527063.000000
 !s107 C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1|C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv|
 !i113 1
@@ -40,17 +40,17 @@ vDecoder_tb
 R1
 R2
 !i10b 1
-!s100 3Unn>Iok32l8<dhKmoScH0
+!s100 Db`6k75XkC2R4:`41?2hm0
 R3
-IPNlWGJ]L3IU5OCh>dG>D03
+IoVeeh<WI7j3ZN4^l[>oTS1
 R4
 S1
 R0
-w1728452445
+w1728526946
 8C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv
 FC:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv
 !i122 1
-L0 1 48
+L0 1 29
 R5
 r1
 !s85 0

@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Tue Oct  8 23:41:33 2024
+Analysis & Elaboration Status : Successful - Wed Oct  9 20:28:04 2024
 Quartus Prime Version : 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 Revision Name : pwmALU
-Top-level Entity Name : Decoder
+Top-level Entity Name : ALU
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge

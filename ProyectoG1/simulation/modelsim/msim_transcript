@@ -13,7 +13,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:30 on Oct 08,2024
+# Start time: 20:24:04 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_primitives.v 
 # -- Compiling module global
 # -- Compiling module carry
@@ -95,7 +95,7 @@
 # 	alt_iobuf_diff
 # 	alt_bidir_diff
 # 	alt_bidir_buf
-# End time: 23:42:31 on Oct 08,2024, Elapsed time: 0:00:01
+# End time: 20:24:05 on Oct 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/lpm_ver
@@ -106,7 +106,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work lpm_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:32 on Oct 08,2024
+# Start time: 20:24:05 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work lpm_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/220model.v 
 # -- Compiling module LPM_MEMORY_INITIALIZATION
 # -- Compiling module LPM_HINT_EVALUATION
@@ -170,7 +170,7 @@
 # 	lpm_inpad
 # 	lpm_outpad
 # 	lpm_bipad
-# End time: 23:42:32 on Oct 08,2024, Elapsed time: 0:00:00
+# End time: 20:24:06 on Oct 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/sgate_ver
@@ -181,7 +181,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work sgate_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:32 on Oct 08,2024
+# Start time: 20:24:06 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work sgate_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/sgate.v 
 # -- Compiling module oper_add
 # -- Compiling module oper_addsub
@@ -223,7 +223,7 @@
 # 	oper_decoder
 # 	oper_bus_mux
 # 	oper_latch
-# End time: 23:42:32 on Oct 08,2024, Elapsed time: 0:00:00
+# End time: 20:24:06 on Oct 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_mf_ver
@@ -234,7 +234,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work altera_mf_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:32 on Oct 08,2024
+# Start time: 20:24:06 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work altera_mf_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_mf.v 
 # -- Compiling module lcell
 # -- Compiling module ALTERA_MF_MEMORY_INITIALIZATION
@@ -364,7 +364,7 @@
 # 	alt_fault_injection
 # 	sld_virtual_jtag_basic
 # 	altsource_probe
-# End time: 23:42:34 on Oct 08,2024, Elapsed time: 0:00:02
+# End time: 20:24:08 on Oct 09,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/altera_lnsim_ver
@@ -375,7 +375,7 @@
 # Modifying modelsim.ini
 # vlog -sv -work altera_lnsim_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:34 on Oct 08,2024
+# Start time: 20:24:08 on Oct 09,2024
 # vlog -reportprogress 300 -sv -work altera_lnsim_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/altera_lnsim.sv 
 # -- Compiling package altera_lnsim_functions
 # -- Compiling package altera_generic_pll_functions
@@ -458,7 +458,7 @@
 # 	altera_iopll
 # 	fourteennm_altera_iopll
 # 	fourteennm_simple_iopll
-# End time: 23:42:35 on Oct 08,2024, Elapsed time: 0:00:01
+# End time: 20:24:09 on Oct 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_ver
@@ -469,7 +469,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:35 on Oct 08,2024
+# Start time: 20:24:09 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -483,19 +483,19 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 23:42:38 on Oct 08,2024, Elapsed time: 0:00:03
+# End time: 20:24:12 on Oct 09,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 10
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:38 on Oct 08,2024
+# Start time: 20:24:13 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hmi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 23:42:41 on Oct 08,2024, Elapsed time: 0:00:03
+# End time: 20:24:15 on Oct 09,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:41 on Oct 08,2024
+# Start time: 20:24:15 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_atoms.v 
 # -- Compiling UDP CYCLONEV_PRIM_DFFE
 # -- Compiling UDP CYCLONEV_PRIM_DFFEAS
@@ -635,7 +635,7 @@
 # 	cyclonev_mem_phy
 # 	cyclonev_oscillator
 # 	cyclonev_hps_interface_fpga2sdram
-# End time: 23:42:42 on Oct 08,2024, Elapsed time: 0:00:01
+# End time: 20:24:16 on Oct 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_hssi_ver
@@ -646,15 +646,15 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:42 on Oct 08,2024
+# Start time: 20:24:16 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_hssi_atoms_ncrypt.v 
 # 
 # Top level modules:
-# End time: 23:42:45 on Oct 08,2024, Elapsed time: 0:00:03
+# End time: 20:24:18 on Oct 09,2024, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work cyclonev_hssi_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:45 on Oct 08,2024
+# Start time: 20:24:18 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_hssi_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_hssi_atoms.v 
 # -- Compiling module cyclonev_hssi_8g_pcs_aggregate
 # -- Compiling module cyclonev_hssi_8g_rx_pcs
@@ -754,7 +754,7 @@
 # 	arriav_hssi_avmm_interface
 # 	arriav_hssi_pma_hi_pmaif
 # 	arriav_hssi_pma_hi_xcvrif
-# End time: 23:42:46 on Oct 08,2024, Elapsed time: 0:00:01
+# End time: 20:24:19 on Oct 09,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlib verilog_libs/cyclonev_pcie_hip_ver
@@ -765,7 +765,7 @@
 # Modifying modelsim.ini
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:46 on Oct 08,2024
+# Start time: 20:24:19 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/mentor/cyclonev_pcie_hip_atoms_ncrypt.v 
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
@@ -775,18 +775,18 @@
 # ** Warning: (vlog-2083) <protected>(<protected>): Carriage return (0x0D) is not followed by a newline (0x0A).
 # 
 # Top level modules:
-# End time: 23:42:50 on Oct 08,2024, Elapsed time: 0:00:04
+# End time: 20:24:22 on Oct 09,2024, Elapsed time: 0:00:03
 # Errors: 0, Warnings: 6
 # vlog -vlog01compat -work cyclonev_pcie_hip_ver {c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:50 on Oct 08,2024
+# Start time: 20:24:22 on Oct 09,2024
 # vlog -reportprogress 300 -vlog01compat -work cyclonev_pcie_hip_ver c:/intelfpga_lite/22.1std/quartus/eda/sim_lib/cyclonev_pcie_hip_atoms.v 
 # -- Compiling module cyclonev_hd_altpe2_hip_top
 # -- Compiling module arriav_hd_altpe2_hip_top
 # 
 # Top level modules:
 # 	cyclonev_hd_altpe2_hip_top
-# End time: 23:42:51 on Oct 08,2024, Elapsed time: 0:00:01
+# End time: 20:24:22 on Oct 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # if {[file exists rtl_work]} {
@@ -800,29 +800,29 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:51 on Oct 08,2024
+# Start time: 20:24:23 on Oct 09,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1" C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder.sv 
 # -- Compiling module Decoder
 # 
 # Top level modules:
 # 	Decoder
-# End time: 23:42:51 on Oct 08,2024, Elapsed time: 0:00:00
+# End time: 20:24:23 on Oct 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1 {C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 23:42:51 on Oct 08,2024
+# Start time: 20:24:23 on Oct 09,2024
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1" C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv 
 # -- Compiling module Decoder_tb
 # 
 # Top level modules:
 # 	Decoder_tb
-# End time: 23:42:51 on Oct 08,2024, Elapsed time: 0:00:00
+# End time: 20:24:23 on Oct 09,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Decoder_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Decoder_tb 
-# Start time: 23:42:51 on Oct 08,2024
+# Start time: 20:24:23 on Oct 09,2024
 # Loading sv_std.std
 # Loading work.Decoder_tb
 # Loading work.Decoder
@@ -833,26 +833,9 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# Time	 bin1	 bin2	 hex_result1	 hex_result2
-# 0	 00	 00	 0111111	 0111111
-# 10	 00	 01	 0111111	 0100110
-# 20	 00	 10	 0111111	 1011001
-# 30	 00	 11	 0111111	 1000000
-# 40	 01	 00	 0100110	 0111111
-# 50	 01	 01	 0100110	 0100110
-# 60	 01	 10	 0100110	 1011001
-# 70	 01	 11	 0100110	 1000000
-# 80	 10	 00	 1011001	 0111111
-# 90	 10	 01	 1011001	 0100110
-# 100	 10	 10	 1011001	 1011001
-# 110	 10	 11	 1011001	 1000000
-# 120	 11	 00	 1000000	 0111111
-# 130	 11	 01	 1000000	 0100110
-# 140	 11	 10	 1000000	 1011001
-# 150	 11	 11	 1000000	 1000000
-# ** Note: $finish    : C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv(45)
-#    Time: 160 ps  Iteration: 0  Instance: /Decoder_tb
+# ** Note: $finish    : C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv(26)
+#    Time: 200 ps  Iteration: 0  Instance: /Decoder_tb
 # 1
-# Break in Module Decoder_tb at C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv line 45
-# End time: 23:48:18 on Oct 08,2024, Elapsed time: 0:05:27
+# Break in Module Decoder_tb at C:/Users/PC/Desktop/gvega_compu_archi_found_2G1_2024/ProyectoG1/Decoder_tb.sv line 26
+# End time: 20:27:12 on Oct 09,2024, Elapsed time: 0:02:49
 # Errors: 0, Warnings: 0

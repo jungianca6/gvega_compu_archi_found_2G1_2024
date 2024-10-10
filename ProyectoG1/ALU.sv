@@ -40,11 +40,14 @@ module ALU # (parameter n = 2)(
 	
 	
 	// Instancia del decoder
-	Decoder decoder_inst (
-		 .bin1(Result[n-1:0]),
-		 .bin2(Operator),
-		 .hex_result1(display1),
-		 .hex_result2(display2)
+	Decoder result (
+		 .bin(Result[n-1:0]),
+		 .hex_result(display1)
+	);
+	
+	Decoder operator (
+		 .bin(Operator),
+		 .hex_result(display2)
 	);
 	
 	// Instancias de multiplexores para seleccionar la operación

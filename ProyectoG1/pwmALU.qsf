@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSXFC6D6F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY Decoder
+set_global_assignment -name TOP_LEVEL_ENTITY ALU
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.2
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:33:08  OCTOBER 06, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.2 Lite Edition"
@@ -102,13 +102,13 @@ set_global_assignment -name EDA_TEST_BENCH_NAME mux2to1_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux2to1_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux2to1_tb -section_id mux2to1_tb
 set_global_assignment -name SYSTEMVERILOG_FILE Decoder_tb.sv
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name EDA_TEST_BENCH_FILE mux4to1_tb.sv -section_id mux4to1_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE mux2to1_tb.sv -section_id mux2to1_tb
 set_global_assignment -name EDA_TEST_BENCH_NAME Decoder_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Decoder_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Decoder_tb -section_id Decoder_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Decoder_tb.sv -section_id Decoder_tb
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
